@@ -17,7 +17,9 @@ df['family_size'] = df['SibSp'] + df['Parch'] + 1
 df['is_child'] = (df['Age'] < 16).astype(int)
 
 
-df = df[['Survived', 'Pclass', 'Sex', 'Age', 'Fare', 'family_size', 'is_child']]
+df = df[['Survived', 'Pclass', 'Age', 'Fare', 'family_size', 'is_child']]
+
+print(df.head())
 
 X = df.drop('Survived', axis=1)
 y = df['Survived']
